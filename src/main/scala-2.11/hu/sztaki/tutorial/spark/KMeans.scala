@@ -47,12 +47,12 @@ object KMeans {
     /**
      * @todo Parse vectors.
      */
-    val data = _
+    // val data = _
 
     /**
      * @todo Set K points.
      */
-    val kPoints = _
+    // val kPoints = _
 
     while(tempDist > convergeDist) {
       /**

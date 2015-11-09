@@ -16,7 +16,7 @@ object BigramAnalysis{
      * @todo[1] Transform to `Bigram`s and filter invalid items.
      * @hint Use the companion object of `model.Bigram`.
      */
-    val bigramsRDD = _
+    // val bigramsRDD = _
 
     /**
      * @todo[2] Total number of bigrams
@@ -34,7 +34,7 @@ object BigramAnalysis{
      * @todo[5] Count each element.
      * @hint Use the AdvancedRDD (implicitly).
      */
-    val bgOccrCount = _
+    // val bgOccrCount = _
 
     /**
      * @todo[6] Number of bigrams that appear only once.
@@ -43,34 +43,34 @@ object BigramAnalysis{
     /**
      * @todo[7] List the top ten most frequent bigrams and their counts.
      */
-    val bgOccrCountSorted = _
+    // val bgOccrCountSorted = _
 
     /**
      * @todo[8] What fraction of all bigrams occurrences does the top ten bigrams account for?
      *          That is, what is the cumulative frequency of the top ten bigrams?
      */
-    val totalBgCount = _
+    // val totalBgCount = _
 
-    val topTenBgOccrCount = _
+    // val topTenBgOccrCount = _
 
-    val fractionTopTenBigramOccurance = _
+    // val fractionTopTenBigramOccurance = _
 
     /**
      * @todo[9*] Determine the frequency of bigrams with the same start.
      * @hint Use `BigramsWithSameStart` and aggregateByKey also.
      */
-    val startingWordBigram = _
+    // val startingWordBigram = _
 
-    val startingWordAllBigrams = _
+    // val startingWordAllBigrams = _
 
-    val startWordBGCount = _
+    // val startWordBGCount = _
 
-    val startWordBGAndBGCount = _
+    // val startWordBGAndBGCount = _
 
     //  [(String, ((String, Int)), Int)]
     //  startWord - BG           - BG count    - bgs starting with word
     //  a._1      - a._2._1._1   - a._2._1._2  - a._2._2
-    val startWordBGbGCountStartWordBgsCount = _
+    // val startWordBGbGCountStartWordBgsCount = _
 
     /**
      * @todo[10] What are the five most frequent words following the word "light"?
@@ -88,13 +88,13 @@ object BigramAnalysis{
      * This means that N-100 words are never seen after "happy".
      * (Perhaps the distribution of happiness is quite limited?).
      */
-    val allWords = _
-    val allDistinctWordsCount = _
-    val totalPossibleCombinations = _
+    // val allWords = _
+    // val allDistinctWordsCount = _
+    // val totalPossibleCombinations = _
 
-    val allDistinctBigrams = _
+    // val allDistinctBigrams = _
 
-    val fractionOfBgsFoundOutOFTotalPossible = _
+    // val fractionOfBgsFoundOutOFTotalPossible = _
   }
 }
 
