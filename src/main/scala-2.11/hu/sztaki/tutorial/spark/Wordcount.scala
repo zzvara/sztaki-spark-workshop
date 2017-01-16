@@ -12,9 +12,16 @@ object Wordcount {
     val sc = new SparkContext(conf)
 
     val counts =  sc
-      .textFile(inputFile)
+      .textFile(inputFile, 10)
       .flatMap(_.split(" "))
       .map((_, 1))
-      .reduceByKey(_ + _)
+      .reduceByKey(_ + _, 20)
+      .sortBy(_._2, ascending = false)
+
+    val result = counts.take(10)
+
+    result foreach println
+
+    Thread.sleep(54738926544l)
   }
 }

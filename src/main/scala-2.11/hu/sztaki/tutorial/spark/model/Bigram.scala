@@ -22,5 +22,11 @@ object Bigram {
   /**
    * @todo Complete function.
    */
-  def apply(input: String): List[Bigram] = ???
+  def apply(line: String): List[Bigram] = {
+    val words = line.split(" ")
+    if (words.size < 2) List()
+    else words.sliding(2).map {
+           array => Bigram(array(0), array(1))
+         }.toList
+  }
 }

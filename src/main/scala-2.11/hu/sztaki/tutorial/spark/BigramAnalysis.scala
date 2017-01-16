@@ -7,7 +7,9 @@ import org.apache.spark.{SparkConf, SparkContext}
 object BigramAnalysis{
   def main (args: Array[String]){
     val sc = new SparkContext(
-      new SparkConf().setAppName("Bigram analysis")
+      new SparkConf()
+        .setAppName("Bigram analysis")
+        .setMaster("local[5]")
     )
 
     val file = sc.textFile(args(0))
@@ -16,7 +18,8 @@ object BigramAnalysis{
      * @todo[1] Transform to `Bigram`s and filter invalid items.
      * @hint Use the companion object of `model.Bigram`.
      */
-    // val bigramsRDD = _
+    //val bigramsRDD = file.map(line => Bigram(line))
+    val bigramsRDD = file.flatMap(Bigram(_))
 
     /**
      * @todo[2] Total number of bigrams
